@@ -3,7 +3,7 @@ const initialState = {
     open: true, 
     horizontal: 'center', 
     vertical: 'top',
-    class: 'success',
+    class: 'error',
     time: 3000,
     msg: 'Dados atualizados'
 }
@@ -11,7 +11,7 @@ const initialState = {
 export default (state = initialState, { type, payload }) => {
   switch (type) {
 
-  case actionsTypes:
+  case actionsTypes.CHANGE:
     return { ...state, ...payload }
 
   default:
