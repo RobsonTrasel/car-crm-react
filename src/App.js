@@ -1,6 +1,7 @@
 import { Button, createTheme, ThemeProvider, TextField } from "@mui/material";
 import { blue } from "@mui/material/colors";
 import React from "react";
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 const theme = createTheme({
   palette: {
@@ -26,10 +27,7 @@ const theme = createTheme({
 
 const App = () => (
   <ThemeProvider theme={theme}>
-    <Button variant="text">Text</Button>
-    <Button variant="contained" color="primary">primary</Button>
-    <Button variant="outlined" color="secondary">secondary</Button>
-    <TextField />
+    
   </ThemeProvider>
 )
 
