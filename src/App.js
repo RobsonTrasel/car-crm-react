@@ -1,7 +1,13 @@
+import 'bootstrap/dist/css/bootstrap.min.css'
+import "./global.css"
+import React from "react";
 import { Button, createTheme, ThemeProvider, TextField } from "@mui/material";
 import { blue } from "@mui/material/colors";
-import React from "react";
-import 'bootstrap/dist/css/bootstrap.min.css'
+import { Provider } from "react-redux";
+import { store } from "./store/Store";
+import RoutesPath from "./routes";
+import { Loading } from "./view/components";
+
 
 const theme = createTheme({
   palette: {
@@ -26,9 +32,13 @@ const theme = createTheme({
 })
 
 const App = () => (
-  <ThemeProvider theme={theme}>
-    
-  </ThemeProvider>
+  <Provider store={store}>
+    <ThemeProvider theme={theme}>
+      <Loading/>
+      <RoutesPath/>
+    </ThemeProvider>
+  </Provider>
+  
 )
 
 export default App
