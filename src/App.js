@@ -1,13 +1,11 @@
-import { createTheme } from "@mui/system";
+import { Button } from "@mui/material";
 import React from "react";
-
-const theme = createTheme({
-  
-})
 
 const App = () => (
   <>
-    <h1>Hello, world</h1>
+    <Button variant="text">Text</Button>
+    <Button variant="contained">Contained</Button>
+    <Button variant="outlined">Outlined</Button>
   </>
 )
 
