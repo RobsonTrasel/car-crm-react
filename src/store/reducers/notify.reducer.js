@@ -3,7 +3,7 @@ const initialState = {
     open: true, 
     horizontal: 'center', 
     vertical: 'top',
-    class: 'error',
+    class: 'success',
     time: 3000,
     msg: 'Dados atualizados'
 }
