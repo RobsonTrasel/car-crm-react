@@ -19,7 +19,7 @@ export default function Alert() {
       onClose={()=> dispatch( changeAlert({open: false}) )}
       className="d-flex flex-column align-items-center justify-content-center h-100"
     >
-      <div className='bg-white rounded-lg d-flex align-items-center outline-none p-4'>
+      <div className='bg-white rounded-lg d-flex align-items-center p-4'>
         {(alert.class === "success") && 
           <MdCheckCircle style={{fontSize: '2.5rem'}} className='mr-3 text-success' />
         }
