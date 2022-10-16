@@ -6,7 +6,7 @@ import { blue } from "@mui/material/colors";
 import { Provider } from "react-redux";
 import { store } from "./store/Store";
 import RoutesPath from "./routes";
-import { Loading, Notify } from "./view/components";
+import { Loading, Notify, Alert } from "./view/components";
 
 
 const theme = createTheme({
@@ -34,6 +34,7 @@ const theme = createTheme({
 const App = () => (
   <Provider store={store}>
     <ThemeProvider theme={theme}>
+      <Alert/>
       <Notify/>
       <Loading/>
       <RoutesPath/>
