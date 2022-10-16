@@ -1,7 +1,10 @@
 import { actionsTypes } from '../actions/auth.action'
 
 const initialState = {
-    crendetials: {},
+    credentials: {
+        email: '',
+        password: ''
+    },
     success: false
 }
 
@@ -11,8 +14,8 @@ export default (state = initialState, { type, payload }) => {
     case actionsTypes.CHANGE:
         return { 
             ...state, 
-            crendetials: {
-                ...state.crendetials,
+            credentials: {
+                ...state.credentials,
                 ...payload
             }
         }

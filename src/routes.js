@@ -5,11 +5,15 @@ import Home from "./view/Home";
 import Auth from "./view/auth";
 
 
+
+
 const RoutesPath = () => (
     <Router>
         <Suspense fallback={<div className="d-flex justify-content-center mt-5 pt-5"><CircularProgress/></div>}>
             <Routes>
                 <Route exact path="/" element={<Auth/>}/>
+                <Route exact path="/login" element={<Auth/>}/>
+                <Route exact path="/vehicles" element={<Home/>}/>
             </Routes>
         </Suspense>
     </Router>

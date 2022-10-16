@@ -1,11 +1,6 @@
 import { http } from '../../config/Http'
 import { changeLoading } from './loading'
 import { changeNotify } from './notify'
-import dotenv from 'dotenv'
-
-dotenv.config({
-    path: '../../../.env'
-})
 
 
 export const actionsTypes = {
@@ -42,7 +37,7 @@ export const login = credentials => dispatch => {
     return http.post('oauth/token',  {
         grant_type: 'password',
         client_id: 2,
-        client_secret: process.env.CLIENT_SECRET,
+        client_secret: 'hRWXGnJiNwOwpI5dn3DHDQYAWLVBrzrIVLfqu2MS',
         username: credentials.email ,
         password: credentials.password
     }).then(res => {
